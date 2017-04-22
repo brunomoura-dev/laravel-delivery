@@ -13,6 +13,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use Delivery\Models\Category;
+use Delivery\Models\Products;
 
 $factory->define(Delivery\Models\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -28,5 +29,13 @@ $factory->define(Delivery\Models\User::class, function (Faker\Generator $faker) 
 $factory->define(Category::class, function(\Faker\Generator $faker){
     return [
       'name' => $faker->word
+    ];
+});
+
+$factory->define(Products::class, function(\Faker\Generator $faker){
+    return [
+        'name' => $faker->word,
+        'description' => $faker->sentence,
+        'price' => $faker->numberBetween(10, 50)
     ];
 });
