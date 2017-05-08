@@ -167,6 +167,8 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -177,7 +179,15 @@ return [
         Delivery\Providers\EventServiceProvider::class,
         Delivery\Providers\RouteServiceProvider::class,
 
-    ],
+        /*
+         * Repository Service providers
+         */
+        Delivery\Providers\CategoryServiceProvider::class,
+        Delivery\Providers\ClientServiceProvider::class,
+        Delivery\Providers\OrderServiceProvider::class,
+        Delivery\Providers\OrderItemServiceProvider::class,
+        Delivery\Providers\ProductServiceProvider::class,
+        Delivery\Providers\UserServiceProvider::class    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -225,6 +235,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
