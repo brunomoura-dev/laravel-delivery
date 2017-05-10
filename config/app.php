@@ -182,12 +182,8 @@ return [
         /*
          * Repository Service providers
          */
-        Delivery\Providers\CategoryServiceProvider::class,
-        Delivery\Providers\ClientServiceProvider::class,
-        Delivery\Providers\OrderServiceProvider::class,
-        Delivery\Providers\OrderItemServiceProvider::class,
-        Delivery\Providers\ProductServiceProvider::class,
-        Delivery\Providers\UserServiceProvider::class    ],
+        Delivery\Providers\RepositoryServiceProvider::class
+    ],
 
     /*
     |--------------------------------------------------------------------------
