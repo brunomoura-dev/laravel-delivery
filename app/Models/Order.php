@@ -8,17 +8,17 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 class Order extends Model implements Transformable {
     use TransformableTrait;
-    protected $fillable = ['user_id', 'user_deliveryman_id', 'total', 'status'];
-
-    public function user(){
-        return $this->belongsTo(User::class);
-    }
+    protected $fillable = ['client_id', 'user_deliveryman_id', 'total', 'status'];
 
     public function items(){
         return $this->hasMany(OrderItem::class);
     }
 
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
+
     public function deliveryman(){
-        return $this->belongsTo(User::class, 'user_deliveryman_id');
+        return $this->belongsTo(User::class, 'user_deliveryman_id', 'id');
     }
 }

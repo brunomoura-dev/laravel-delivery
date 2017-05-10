@@ -13,4 +13,8 @@ class Client extends Model implements Transformable {
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function order(){
+        return $this->hasMany(Order::class);
+    }
 }
