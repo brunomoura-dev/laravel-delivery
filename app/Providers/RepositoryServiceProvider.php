@@ -6,6 +6,8 @@ use Delivery\Repositories\CategoryRepository;
 use Delivery\Repositories\CategoryRepositoryEloquent;
 use Delivery\Repositories\ClientRepository;
 use Delivery\Repositories\ClientRepositoryEloquent;
+use Delivery\Repositories\CupomRepository;
+use Delivery\Repositories\CupomRepositoryEloquent;
 use Delivery\Repositories\OrderItemRepository;
 use Delivery\Repositories\OrderItemRepositoryEloquent;
 use Delivery\Repositories\OrderRepository;
@@ -29,5 +31,6 @@ class RepositoryServiceProvider extends ServiceProvider {
         $this->app->bind(OrderItemRepository::class, OrderItemRepositoryEloquent::class);
         $this->app->bind(ProductRepository::class, ProductRepositoryEloquent::class);
         $this->app->bind(UserRepository::class, UserRepositoryEloquent::class);
+        $this->app->bind(CupomRepository::class, CupomRepositoryEloquent::class);
     }
 }
