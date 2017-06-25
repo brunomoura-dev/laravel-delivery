@@ -12,25 +12,22 @@ use Delivery\Validators\ProductValidator;
  * Class ProductRepositoryEloquent
  * @package namespace Delivery\Repositories;
  */
-class ProductRepositoryEloquent extends BaseRepository implements ProductRepository
-{
+class ProductRepositoryEloquent extends BaseRepository implements ProductRepository {
+
     /**
      * Specify Model class name
      *
      * @return string
      */
-    public function model()
-    {
+    public function model(){
         return Product::class;
     }
 
-    
 
     /**
      * Boot up the repository, pushing criteria
      */
-    public function boot()
-    {
+    public function boot(){
         $this->pushCriteria(app(RequestCriteria::class));
     }
 }
