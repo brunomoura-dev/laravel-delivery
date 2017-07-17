@@ -20,3 +20,7 @@ Route::group(['prefix' => 'customer', 'as' => 'customer.', 'middleware' => 'auth
     Route::get('order/create', ['as' => 'order.create', 'uses' => 'CheckoutController@create']);
     Route::post('order/store', ['as' => 'order.store', 'uses' => 'CheckoutController@store']);
 });
+
+Route::post('oauth/access_token', function(){
+
+});
